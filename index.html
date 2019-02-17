@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>-Responsive-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <style>
+        html {
+            width: 100%;
+            margin: 0px;
+        }
+
+        body {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: rgb(11, 11, 68);
+            /* background-image: url("./bgp.jpg"); */
+            font-family: sans-serif;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header,
+        #intro,
+        #aboutUs,
+        #service,
+        #contact,
+        footer {
+            grid-column: 1 / -1;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        /* header */
+        header {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0%;
+            place-items: center;
+            grid-row-start: 1;
+            align-self: start;
+            z-index: 99;
+            position: fixed;
+        }
+
+        .logo {
+            justify-self: start;
+            margin-left: 50px;
+            font-size: 25px;
+            color: cyan;
+        }
+
+        .cafe {
+            font-weight: border;
+            text-shadow: 2px 2px 3px black;
+        }
+
+        .shop {
+            text-shadow: 2px 2px 2px black;
+        }
+
+        nav {
+        display: none;
+        justify-self: center;
+        text-transform: uppercase;
+        grid-column: 1 / -1;
+      }
+
+      .navi {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        place-items: center;
+        grid-gap: 50px;
+        font-size: 30px;
+
+      }
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+/* the right menu button */
+        .menu {
+            width: 50px;
+            height: 50px;
+            border-radius: 0% 0% 30% 30%;
+            background-color: cyan;
+            grid-column-start: 2;
+            justify-self: end;
+            margin-right: 50px;
+        }
+
+        .bar {
+            display: block;
+            width: 50%;
+            height: 8px;
+            background-color: white;
+            margin: 10px auto;
+        }
+
+
+        /* input[type="checkbox"] {
+             display: none;
+            }
+
+          input[type="checkbox"] ~ ul {
+              display: block;
+            } */
+
+        .menu:hover+nav {
+            display: block;
+            height: 100vh;
+            opacity: 1;
+        }
+
+        header:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* #INTRO */
+        #intro {
+            background: url("./11.jpg") center/cover no-repeat;
+            grid-row-start: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center start;
+            overflow-y: hidden;
+            height: auto;
+        }
+
+        #intro div {
+            padding: 100px 50px;
+            text-align: center;
+            color: cyan;
+        }
+
+        #intro .firstWord {
+            font-size: 50px;
+        }
+
+        #intro p {
+            font-size: 40px;
+        }
+
+        /* About us part */
+
+        #aboutUs {
+            display: grid;
+            grid-template: repeat(6, 1fr)/ repeat(2, 1fr);
+            color: white;
+            height: 700px;
+        }
+
+        .title {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            color: white;
+            text-shadow: 1px 2px 2px #000;
+            margin-left: 10px;
+            z-index: 1;
+            font-size: 30px;
+        }
+
+        .title::before {
+            display: block;
+            content: "";
+            height: 7px;
+            width: 40px;
+            background-color: cyan;
+            transform: translate(-50px, 20px);
+        }
+
+        .title h2 {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #aboutUs .title {
+            margin-left: 70px;
+        }
+
+        #aboutUs img {
+            grid-column: 1 / 2;
+            grid-row: 1 / 6;
+            z-index: -1;
+            background-attachment: local;
+            overflow-y: hidden;
+        }
+
+        #aboutUs p {
+            width: 90%;
+            grid-column: 2 / 3;
+            grid-row: 2 / 5;
+            text-align: center;
+            justify-self: center;
+            padding: 30px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        #aboutUs p:hover {
+            text-decoration-line: underline;
+            text-decoration-color: white;
+            color: yellow;
+            line-height: 35px;
+        }
+
+        #aboutUs button {
+            grid-column: 2 / -1;
+            grid-row: 4 / 5;
+            text-align: center;
+            justify-self: center;
+            background-color: cyan;
+            text-shadow: 1px 1px 2px #000;
+            color: white;
+            font-size: 15px;
+            height: 50px;
+            width: 150px;
+            border-radius: 0% 0% 50% 50%;
+            margin-top: 100px;
+
+        }
+
+        /* Service part   */
+        #service {
+            width: 90%;
+            margin: 100px auto;
+            display: grid;
+            grid-template-rows: 1fr 3fr 3fr;
+            grid-gap: 20px;
+            height: auto;
+        }
+
+        #service img {
+            vertical-align: middle;
+        }
+/* the hover pictures */
+
+      .container {
+        position: relative;
+        width: 100%;
+      }
+
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: #008cba;
+      }
+
+      .container:hover .overlay {
+        opacity: 1;
+      }
+
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+        /* contact part   */
+        #contact {
+            width: 90%;
+            margin: 0 auto;
+            height: 400px;
+        }
+
+        #contact form {
+            display: grid;
+            grid-template-rows: repeat(5, 50px);
+            grid-template-columns: repeat(2, 2fr);
+            grid-column-gap: 20px;
+        }
+
+        #contact .name {
+            grid-column: 1 /2;
+            grid-row: 2 / 3;
+        }
+
+        #contact .email {
+            grid-column: 1 / 2;
+            grid-row: 4 /5;
+        }
+
+        #contact .message {
+            grid-row: 2 / 5;
+            grid-column: 2 /3;
+        }
+
+        #contact .send {
+            grid-row: 5 / 6;
+            grid-column: 2 / 3;
+            text-align: center;
+            justify-self: end;
+            background-color: cyan;
+            color: white;
+            font-size: 15px;
+            height: 50px;
+            width: 150px;
+            margin-top: 20px;
+            border-radius: 0% 0% 50% 50%;
+        }
+
+
+        footer {
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+            color: white;
+            height: 100px;
+            background-color: darkblue;
+
+        }
+
+        footer h3 {
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            text-align: center;
+            justify-self: center;
+            align-self: start;
+            margin-top: 2%;
+        }
+
+        footer h5 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            text-align: center;
+            justify-self: center;
+            align-self: end;
+            margin-bottom: 2%;
+
+        }
+
+        /* for mobile phones */
+
+        @media screen and (max-width: 768px) {
+            html {
+                width: 100%;
+            }
+
+            body {
+                width: 100%;
+            }
+
+            header {
+                grid-template-columns: repeat(2, 50%);
+            }
+
+            .logo {
+                justify-self: start;
+                margin-left: 10px;
+                font-size: 20px;
+                color: cyan;
+            }
+
+            nav {
+                display: none;
+                justify-self: center;
+                grid-column: 1 / -1;
+                margin-right: 0%;
+            }
+
+            .navi {
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: 1fr;
+                place-items: center;
+                margin: 0px auto;
+                grid-gap: 50px;
+                font-size: 20px;
+            }
+
+            .menu {
+                display: grid;
+                justify-self: end;
+                margin-right: 20px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .title {
+                margin-left: 20px;
+                z-index: 1;
+                font-size: 25px;
+            }
+
+            .title::before {
+                display: block;
+                content: "";
+                height: 5px;
+                width: 25px;
+                background-color: cyan;
+                transform: translate(-30px, 15px);
+            }
+
+            #intro {
+                grid-template-columns: 1fr;
+                width: 100%;
+                place-items: center center;
+            }
+
+            #aboutUs {
+                grid-template-columns: 1fr;
+                width: 100%;
+                height: auto;
+            }
+
+            #aboutUs img {
+                width: 100%;
+                grid-column: 1 / 3;
+                grid-row: 1 / 7;
+                margin: 0 auto;
+                place-content: center center;
+                z-index: -1;
+            }
+
+
+            #aboutUs h2 {
+                grid-template-columns: 1fr;
+                grid-row: 1 / 2;
+                font-size: 25px;
+            }
+
+            #aboutUs p {
+                display: grid;
+                width: 70%;
+                grid-template-columns: 1fr;
+                grid-row: 2 / 5;
+                text-align: center;
+                padding: 20px;
+                margin: 0 auto;
+                font-size: 18px;
+                place-content: center center;
+                background-color: hsl(0, 0%, 0%, 0.8);
+                line-height: 23px;
+            }
+
+            #aboutUs p:hover {
+                text-decoration-line: underline;
+                text-decoration-color: white;
+                color: yellow;
+                line-height: 25px;
+            }
+
+            #aboutUs button {
+                grid-row: 6 / 7;
+                border-radius: 30px;
+                margin-top: 0px;
+            }
+
+            #service {
+                display: grid;
+                grid-template-columns: 100% 0%;
+                grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
+                height: auto;
+            }
+
+            #service img {
+                width: 100%;
+            }
+
+            #service .container1 {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+
+            #service .container2 {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+
+            #service .container3 {
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+            }
+
+            #service .container4 {
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+            }
+
+            #contact {
+                height: auto;
+            }
+
+            #contact form {
+                display: grid;
+                grid-template-columns: 100% 0%;
+                grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+                height: 400px;
+                grid-gap: 20px;
+                
+            }
+
+            #contact .name {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            #contact .email {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+
+            #contact .message {
+                grid-column: 1 / 2;
+                grid-row: 3 / 5;
+            }
+
+            #contact .send {
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+                z-index: 1;
+                margin-top: 0%;
+                justify-self: center;
+                border-radius: 30px;
+            }
+
+            footer h5 {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a ref="#" class="logo">
+            <span class="cafe">Cafe.</span>
+            <span class="shop">Shop</span>
+        </a>
+        <!-- <input type="checkbox" /> -->
+        <div class="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul class="navi">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">cafe blog</a></li>
+                <li v><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="intro">
+        <div>
+            <h1 class="firstWord">Bonjour,</h1>
+            <p>
+                some tasty cafe
+            </p>
+        </div>
+    </section>
+    <!-- About us part -->
+    <section id="aboutUs">
+        <h2 class="title col-12">About.Us</h2>
+        <img src="./aboutus.jpg" class="col-12">
+        <p class="col-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+            obcaecati! Fugiat consequatur, ad sequi distinctio aut aperiam obcaecati
+            rerum sint facere neque incidunt delectus. Nulla, possimus? Nostrum
+            tempora itaque libero numquam magnam
+        </p>
+        <button>
+            Virtual Tour
+        </button>
+
+    </section>
+    <!-- Services part -->
+    <section id="service">
+        <h2 class="title">Service</h2>
+    <div class="container container1">
+        <img src="./service1.jpg" alt="Avatar" class="image img1" />
+        <div class="overlay">
+            <div class="text">Lorem ipsum dolor sit amet.</div>
+        </div>
+    </div>
+        <div class="container container2">
+            <img src="./service2.jpg" alt="Avatar" class="image img2" />
+            <div class="overlay">
+                <div class="text">Lorem ipsum dolor sit amet.</div>
+            </div>
+        </div>
+        <div class="container container3">
+            <img src="./serivice3.jpg" alt="Avatar" class="image img3" />
+            <div class="overlay">
+                <div class="text">Lorem ipsum dolor sit amet.</div>
+            </div>
+        </div>
+            <div class="container container4">
+                <img src="./service4.jpg" alt="Avatar" class="image img4" />
+                <div class="overlay">
+                    <div class="text">Lorem ipsum dolor sit amet.</div>
+                </div>
+            </div>
+    </section>
+    <!-- Contact part -->
+    <section id="contact">
+        <h2 class="title">Contact</h2>
+        <form action="php" method="GET">
+            <input class="name" type="text" name="name" placeholder="Yourname please..." />
+            <br /><br />
+            <input class="email" type="email" name="email" placeholder="Your Email please..." />
+            <textarea class="message" name="message" id="" cols="50" rows="5" maxlength="15"
+                placeholder="Please feel free to tell us what you want"></textarea>
+            <input class="send" type="submit" value="Send" />
+    </section>
+    </form>
+    <footer>
+        <h3>Cafe.Shop</h3>
+        <h5>&copy;2019 Bea Blome All rights reserved</h5>
+    </footer>
+</body>
+
+</html>
